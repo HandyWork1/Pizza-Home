@@ -18,3 +18,11 @@ header {
     margin-top: 20px;
 
 }
+.sticky-logo {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+    border-radius: 50px;
+}
