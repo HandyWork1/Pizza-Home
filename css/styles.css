@@ -145,5 +145,9 @@ input[type=submit] {
 
 
 #pizza2{
-  float: left;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+  margin-bottom: 30px;
 }
