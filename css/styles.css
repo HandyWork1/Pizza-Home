@@ -26,3 +26,8 @@ header {
     margin: 5px 0;
     border-radius: 50px;
 }
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
