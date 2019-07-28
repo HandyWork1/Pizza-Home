@@ -5,13 +5,19 @@ const mozzarellaCheese = {name:"Mozzarella Cheese", price:50};
 const mushrooms ={name:"Mushrooms", price:100};
 const toppingsList = {name:"Toppings",items:[cheddarCheese, mozzarellaCheese, chicken, mushrooms, pepperoni]}
 
+//Trying to use objects within objects for Sides
+const wedges = {name:"Wedges", price: 350};
+const wings ={name:"Chicken Wings", price:350};
+const mozzarellaSticks = {name:"Mozzarella Sticks", price:400};
+const sidesList = {name:"Sides", items:[mozzarellaSticks, wedges, wings]}
 
+//Trying to use objects within obejcts for size
 const large = {name: "Large Size", price: 550};
 const medium = {name:"Medium Size", price: 400};
 const small = {name: "Small Size", price: 200};
 const sizeList = {name:"Sizes", items:[large, medium, small]};
 
-
+//Using nested objects for crusts
 const thinCrust = {name:"Thin Crust", price:70};
 const thickCrust = {name:"Thick Crust", price: 100};
 const deepCrust = {name:"Deep Crust", price:100};
@@ -22,8 +28,8 @@ $(document).ready(function(){
   var total = 0
   $(".delivery").hide();
   $("#checkouts").hide();
-
-
+    //Getting the radio button values into JQuery
+    //Size
     $("#size").submit(function(event){
       event.preventDefault()
       var size = parseInt($("input[name='size']:checked").val());
@@ -33,7 +39,7 @@ $(document).ready(function(){
       alert("The total so far is: " + total)
     })
 
-
+  //trying to get the checked values from the toppings checkbox form
   $("#toppings").submit(function(event){
     event.preventDefault()
     //Looping through the inputted topping to get the price
@@ -55,6 +61,7 @@ $(document).ready(function(){
     alert("Your current total is " + total)
   });
 
+    //Crust Values
   $("#crust").submit(function(event){
     event.preventDefault()
     var crust = parseInt($("input[name='crust']:checked").val());
@@ -62,22 +69,22 @@ $(document).ready(function(){
     total += (crustsList.items[crust].price)
     alert("The total so far is: " + total)
     });
-
-    $("#delivery").click(function(event){
-  event.preventDefault()
-  var delivery = 100
-  $(".delivery").show()
-  $("#checkouts").append("<li>" +"Delivery : 100" +"</li>")
-  total += delivery
-  alert("The total so far is:" + total)
+    //delivery
+  $("#delivery").click(function(event){
+    event.preventDefault()
+    var delivery = 100
+    $(".delivery").show()
+    $("#checkouts").append("<li>" +"Delivery : 100" +"</li>")
+    total += delivery
+    alert("The total so far is:" + total)
+    });
+  $(".delivery").submit(function(event){
+    event.preventDefault()
+    alert("We will deliver your pizza to " + $("#street").val() + " "+ $("#building").val() + " "+ "House Number: " + $("#houseNumber").val() )
+    $(".delivery").hide();
   });
-$(".delivery").submit(function(event){
-  event.preventDefault()
-  alert("We will deliver your pizza to " + $("#street").val() + " "+ $("#building").val() + " "+ "House Number: " + $("#houseNumber").val() )
-  $(".delivery").hide();
-});
-
-$("#pickup").click(function(event){
+    //Pickup
+  $("#pickup").click(function(event){
     event.preventDefault()
     $("#checkouts").append("<li>" + "Pick up: 0" +"</li>")
     var pickup = 0
