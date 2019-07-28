@@ -156,3 +156,20 @@ input[type=submit] {
   margin-right: 300px;
   margin-top: 200px;
 }
+
+
+img.crust{
+  margin-bottom: 15px;
+  display: inline-block;
+}
+img.stuffed{
+  margin-bottom: 20px;
+  padding-top: 10px
+}
+img.other{
+  width:350px;
+  height:150px;
+}
+img.wedge{
+  width: 250px;
+}
