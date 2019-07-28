@@ -180,3 +180,8 @@ input[type=submit] {
   clear: both;
   display: table;
 }
+
+
+.col-md-6{
+  text-align: center;
+}
