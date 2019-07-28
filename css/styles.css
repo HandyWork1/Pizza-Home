@@ -212,3 +212,9 @@ button.grey:hover{
 .check-out-button:hover{
   background-color: darkred;
 }
+
+
+#check-out-button{
+  align-content: center;
+  text-align: center;
+}
