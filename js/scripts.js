@@ -22,7 +22,7 @@ $(document).ready(function(){
   var total = 0
   $(".delivery").hide();
   $("#checkouts").hide();
-    
+
 
     $("#size").submit(function(event){
       event.preventDefault()
@@ -54,3 +54,40 @@ $(document).ready(function(){
     total *= quantity
     alert("Your current total is " + total)
   });
+
+  $("#crust").submit(function(event){
+    event.preventDefault()
+    var crust = parseInt($("input[name='crust']:checked").val());
+    $("#checkouts").append("<li>" + crustsList.items[crust].name + " " + crustsList.items[crust].price + "</li>")
+    total += (crustsList.items[crust].price)
+    alert("The total so far is: " + total)
+    });
+
+    $("#delivery").click(function(event){
+  event.preventDefault()
+  var delivery = 100
+  $(".delivery").show()
+  $("#checkouts").append("<li>" +"Delivery : 100" +"</li>")
+  total += delivery
+  alert("The total so far is:" + total)
+  });
+$(".delivery").submit(function(event){
+  event.preventDefault()
+  alert("We will deliver your pizza to " + $("#street").val() + " "+ $("#building").val() + " "+ "House Number: " + $("#houseNumber").val() )
+  $(".delivery").hide();
+});
+
+$("#pickup").click(function(event){
+    event.preventDefault()
+    $("#checkouts").append("<li>" + "Pick up: 0" +"</li>")
+    var pickup = 0
+    total += pickup
+    });
+
+  $("#check-out-button").click(function(){
+    $("#checkouts").append("<li>"+ "Your total is: "+ total + "</li>")
+    $("#checkouts").show();
+
+  })
+
+});
