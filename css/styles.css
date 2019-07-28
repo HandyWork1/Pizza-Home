@@ -185,3 +185,11 @@ input[type=submit] {
 .col-md-6{
   text-align: center;
 }
+
+
+h4.delivery{
+  margin-top: 15px;
+}
+#delivery{
+  margin-bottom: 15px;
+}
