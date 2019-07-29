@@ -1,5 +1,5 @@
 # Application Name
-PIZZA_HOME
+## PIZZA_HOME
 
 #### {Brief description of application}, {Date of current version}
 Pizza-Home is a pizza ordering and delivery website that I developed using HTML, CSS, and JavaScript(JQuery).
@@ -22,6 +22,9 @@ Double click on the index.html
 
 ## Technologies Used
 I used HTML, CSS(Bootstrap) to design the website. I used Javascript (JQuery) to make the website interactive.
+
+## Live link
+https://handywork1.github.io/Pizza-Home/
 
 ## Support and contact details
 Feel free to contact me with any questions, comments or suggestions concerning the project.
