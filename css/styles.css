@@ -50,7 +50,7 @@ h1, h2{
     height: auto;
     border-radius: 50px;
     margin-top: 20px;
-
+    position: fixed;
 }
 .sticky-logo {
     display: none;
@@ -64,6 +64,8 @@ h1, h2{
     float: right;
     list-style: none;
     margin-top: 55px;
+    position: fixed;
+    margin-left: 100px;
 }
 .main-nav li {
     display: inline-block;
@@ -193,7 +195,7 @@ h4.delivery{
 #checkout{
   margin-top: 20px;
 }
-.delivery{
+.delivery-button{
   text-align: center;
   justify-content: center;
 }
@@ -205,16 +207,12 @@ button.grey{
 button.grey:hover{
   background-color: grey;
 }
-.check-out-button{
-  color:white;
-  margin-bottom: 20px;
-}
 .check-out-button:hover{
   background-color: darkred;
+  align-content: center;
 }
 
-
-#check-out-button{
+.check-out-button{
   align-content: center;
   text-align: center;
 }
