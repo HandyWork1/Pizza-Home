@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>PIZZA HOME</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootsrap.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
   <body>
@@ -26,32 +26,36 @@
            <h1>Pizza to kill your soul</h1>
            <h2>You have to taste it</h2>
            <a class="btn btn-full" href="#menu">I'm hungry</a>
-           <a class="btn btn-ghost" href="#pizzas">More</a>
+           <a class="btn btn-ghost" href="#contact">More</a>
         </div>
     </header>
     <div class="container">
       <div class="row justify-content-center align-items-center" id="menu">
-        <h2><strong>Pick a Size:</strong></h2>
-        <img src="images/pizza2.jpg" alt="pizza sizes" id="pizza2">
-        <form class="size" id="size">
-          <input type="radio" name="size" value="0" checked>Large ksh.550<br>
-          <input type="radio" name="size" value="1" >Medium ksh.400<br>
-          <input type="radio" name="size" value="2" >Small ksh.200<br><br>
-          <input type="submit" value="submit">
+        <h2 id="second-header"><strong>Pick a Size:</strong></h2><br>
+        <form class="size form-inline" id="size">
+          <div class="col">
+            <img src="images/pizza2.jpg" alt="pizza sizes" id="pizza2">
+            <div class="go">
+              <input type="radio" name="size" value="0" checked>Large ksh.550<br>
+              <input type="radio" name="size" value="1" >Medium ksh.400<br>
+              <input type="radio" name="size" value="2" >Small ksh.200<br><br>
+              <input type="submit" value="submit">
+            </div>
+          </div>
         </form>
       </div>
       <div class="row justify-content-center align-items-center">
         <h2><strong>Choose a Crust:</strong></h2>
         <form class="form-inline" id="crust">
-          <div class="col-sm-2 crust">
+          <div class="col-sm-4 crust">
             <img src="images/thincrust.jpeg" alt="thincrust"><br>
             <input type="radio" name="crust" value="0" checked>Thin Crust ksh.70<br>
           </div>
-          <div class="col-sm-2 crust">
-            <img src="images/thick crust.jpeg" alt="thickcrust"<br><br>
+          <div class="col-sm-4 crust">
+            <img src="images/thick crust.jpeg" alt="thickcrust"><br>
             <input type="radio" name="crust" value="1">Thick Crust ksh.100<br>
           </div>
-          <div class="col-sm-2 crust">
+          <div class="col-sm-4 crust">
             <img src="images/deepcrust.jpeg" alt="deepcrust"><br>
             <input type="radio" name="crust" value="2">Deep Crust ksh.100<br>
           </div>
@@ -61,33 +65,34 @@
       <div class="row justify-content-center align-items-center">
         <h2><strong>Choose your Toppings:</strong></h2>
         <form class="form-inline" id="toppings">
-          <div class="col-md-2 toppings">
+          <div class="col-md-4 toppings">
             <img src="images/cheddarcheese.jpg" alt="cheddar" class="img-fluid toppings" style="width: 100%">
             <input type="checkbox" name="toppings" value="0">Cheddar Cheese<br>
           </div>
-          <div class="col-md-2 toppings">
+          <div class="col-md-4 toppings">
             <img src="images/mozzarellacheese.jpg" alt="mozzarella cheese" class="img-fluid toppings" style="width: 100%">
             <input type="checkbox" name="toppings" value="1">Mozzarella Cheese<br>
           </div>
-          <div class="col-md-2 toppings">
+          <div class="col-md-4 toppings">
             <img src="images/chicken.jpg" alt="chicken" class="img-fluid toppings" style="width:100%">
             <input type="checkbox" name="toppings" value="2">Chicken<br>
           </div>
-          <div class="col-md-2 toppings">
+          <div class="col-md-4 toppings">
             <img src="images/mushroom.jpg" alt="mushroom" class="img-fluid toppings" style="width: 100%">
             <input type="checkbox" name="toppings" value="3">Mushroom<br>
           </div>
-          <div class="col-md-2 toppings">
+          <div class="col-md-4 toppings">
             <img src="images/pepperoni.jpg" alt="pepperoni" class="img-fluid toppings" style="width: 100%">
             <input type="checkbox" name="toppings" value="4">Pepperoni<br>
-          </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          </div>
           <input value= "submit" type="submit">
         </form>
       </div>
       <div class="row justify-content-center align-items-center" id="sides">
-        <h2><strong>CHOOSE QUANTITY</strong></h2>
+        <h2 id="third-header"><strong>CHOOSE QUANTITY</strong></h2>
         <div class="col-md-6">
-          <form id="number">
+          <br><br><br><br><br><br>
+          <form class="form-inline" id="number">
             <input type="number" id="quantity" name="quantity" min="1" size="50">
             <input type="submit">
           </form>
@@ -95,7 +100,7 @@
       </div>
       <div class="row justify-content-center align-items-center" id="checkout">
         <h2><strong>Delivery/Pickup</strong></h2>
-        <button id="delivery" class="btn-warning btn-block btn-lg delivery-button"><i class="fa fa-truck" aria-hidden="true"></i> Delivery ksh.100</button>
+        <button id="delivery" class="btn-warning btn-block btn-lg delivery-button"> Delivery ksh.100</button>
         <form class="delivery">
           <h4>What's the delivery address?</h4>
           Street:<input type="text" id="street"name="street"><br>
@@ -103,9 +108,9 @@
           House Number:<input type="text" id="houseNumber" name="houseNumber"><br>
           <input type="submit">
         </form>
-        <button id="pickup" class="btn btn-lg-success"><i aria-hidden="true"></i> Pickup (free)</button>
+        <button id="pickup" class="btn btn-lg btn-success"> Pickup (free)</button>
       </div>
-      <button class="btn-danger btn-lg check-out-button" id="check-out-button"><i class="fa fa-cutlery" aria-hidden="true"></i> CHECK OUT</button>
+      <button class="btn-danger btn-lg check-out-button" id="check-out-button"> CHECK OUT</button>
         <h2>Here's your order:</h2>
         <ul id="checkouts">
 
